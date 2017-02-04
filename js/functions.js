@@ -13,6 +13,13 @@
 		}
 
 		heroBackground();
+
+		$('.search-holder select').selecter();
+
+		$('a.search-ico').on('click', function(e) {
+			e.preventDefault();
+			$('.search-holder').toggleClass('visible');			
+		});
 	});
 
 })(jQuery, window, document);
