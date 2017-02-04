@@ -55,16 +55,20 @@ td { padding: 0; }
 
 .clearfix:before,
 .clearfix:after,
-.header:before,
-.right-nav:before,
-.nav ul:before,
-.search-holder form:before { display: table; content: ' '; }
+.header:after,
+.right-nav:after,
+.nav ul:after,
+.reverse .nav > ul:after,
+.search-holder form:after,
+.side-holder:after { display: table; content: ' '; }
 
 .clearfix:after,
 .header:after,
 .right-nav:after,
 .nav ul:after,
-.search-holder form:after { clear: both; }
+.reverse .nav > ul:after,
+.search-holder form:after,
+.side-holder:after { clear: both; }
 
 /*
 	transitions
@@ -97,9 +101,9 @@ a {
 	==============================
 */
 
-.header { padding: 19px 0 24px; height: 37px; background: #fff; position: relative; z-index: 10; -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.20);
--moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.20);
-box-shadow: 0 0 20px rgba(0, 0, 0, 0.20); }
+.header { position: relative; z-index: 10; }
+
+.side-holder { position: relative; background: #fff; width: 100%; -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); padding: 19px 0 24px; height: 37px; }
 
 .logo { float: left; margin-left: 19px; }
 .logo a { display: block; width: 162px; height: 37px; background: url(images/logo.png) no-repeat 0 0; font-size: 0; line-height: 0; text-indent: -9999px; }
@@ -114,9 +118,10 @@ box-shadow: 0 0 20px rgba(0, 0, 0, 0.20); }
 .right-nav a.like-ico { background: url(images/like-icon.png) 0 0 no-repeat; }
 .right-nav a.cart-ico { background: url(images/cart-icon.png) 0 0 no-repeat; }
 
-.nav { position: absolute; top: 19px; left: 50%; transform: translateX(-50%); }
+.nav { position: absolute; top: 19px; left: 50%; transform: translateX(-50%); z-index: 1; }
 .nav a { display: block; }
 .nav a:hover { text-decoration: none; }
+
 .nav > ul > li { float: left; line-height: 37px; font-size: 14px; font-weight: 700; position: relative; padding: 0 25px 29px; }
 .nav > ul > li:before { content: ''; width: 1px; height: 18px; position: absolute; top: 10px; left: 0; background: #e5e5e5; }
 .nav > ul > li:first-child:before { display: none; }
@@ -146,6 +151,25 @@ box-shadow: 0 0 20px rgba(0, 0, 0, 0.20); }
 .nav li li:hover > ul { visibility: visible; z-index: 1; opacity: 1; max-height:1000px; -webkit-transform:perspective(400) rotate3d(0,0,0,0);
  }
 
+/* ------------------------------------------------------------ *\
+	reverse header
+\* ------------------------------------------------------------ */
+
+.reverse .side-holder { z-index: 99; }
+
+.reverse .nav { top: 100%; min-width: 1280px; background: #fff; -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); height: 50px; }
+.reverse .nav ul { text-align: center; }
+.reverse .nav li ul { text-align: left; }
+
+.reverse .nav > ul > li { line-height: 50px; padding: 0 30px 5px; float: none; display: inline-block; }
+.reverse .nav > ul > li:before { top: 16px; }
+
+.reverse .logo { position: absolute; top: 20px; left: 50%; transform: translateX(-50%); margin: 0; }
+
+.reverse .search-ico { display: none; }
+.reverse .account-ico { position: absolute; left: 30px; margin: 0; }
+
+
 /*
 	Main
 	==============================
@@ -160,15 +184,28 @@ box-shadow: 0 0 20px rgba(0, 0, 0, 0.20); }
 .search-holder.visible { opacity: 1; visibility: visible; }
 .search-holder form { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-top: 2px solid #c7c5c4; border-bottom: 2px solid #c7c5c4; padding: 10px 0;  width: 1000px; height: 58px; }
 .search-holder select { width: 298px; height: 58px; float: left; }
-.search-holder input[type='text'] { float: left; width: 620px; font-family: 'Montserrat', arial, sans-serif; font-weight: 400; color: #aaa; margin-left: 9px; line-height: 58px; border: 0; padding: 0 5px; background: transparent;  }
-.search-holder input[type='submit'] { float: left; margin: 0 9px; border: 0; cursor: pointer; width: 33px; height: 32px; background: url(images/search-icon.png) no-repeat 0 0; font-size: 0; line-height: 0; text-indent: -9999px; position: relative; top: 50%; transform: translateY(-50%); }
+.search-holder input[type='text'] { float: left; width: 602px; font-family: 'Montserrat', arial, sans-serif; font-weight: 400; color: #aaa; line-height: 58px; border: 0; padding: 0 14px; background: transparent;  }
+.search-holder input[type='submit'] { float: left; border: 0; cursor: pointer; width: 60px; height: 60px; background: url(images/search-icon.png) no-repeat center center; font-size: 0; line-height: 0; text-indent: -9999px; position: relative; top: 50%; transform: translateY(-50%); }
 .search-holder input[type='submit']:hover { opacity: 0.7; }
 
-.search-holder .selecter { display: inline; float: left; width: 298px; height: 58px; margin: 0; }
+.search-holder .selecter { display: inline; float: left; width: 298px; height: 60px; margin: 0; }
 .search-holder .selecter-selected,
-.search-holder .focus .selecter-selected { background: #333; color: #888; font-family: 'Montserrat', arial, sans-serif; font-weight: 400; height: 58px; line-height: 38px; padding: 10px 17px; }
+.search-holder .focus .selecter-selected { background: #333; color: #888; font-family: 'Montserrat', arial, sans-serif; font-weight: 400; height: 60px; line-height: 38px; padding: 10px 17px; border-radius: 0; border: 0; }
 .search-holder .selecter-selected:after { width: 10px; height: 6px; background: url(images/select-arrow.png) 0 0 no-repeat; border: 0; right: 20px; }
 .search-holder .selecter.bottom .selecter-options { bottom: auto; top: 100%; }
+
+/* ------------------------------------------------------------ *\
+	reverse search
+\* ------------------------------------------------------------ */
+
+.reverse .search-holder { position: static; opacity: 1; visibility: visible; }
+.reverse .search-holder form { background: #fff; position: relative; padding: 10px; border: 0; -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); }
+
+.reverse .search-holder input[type='text'] { border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+.reverse .search-holder input[type='submit'] { border: 1px solid #eee; margin-top: 1px; }
+.reverse .search-holder .selecter-selected { border: 1px solid #eee; height: 60px; }
+
+.reverse .search-holder .selecter.bottom .selecter-options { bottom: 100%; top: auto; }
 
 /*
 	Media
@@ -178,6 +215,8 @@ box-shadow: 0 0 20px rgba(0, 0, 0, 0.20); }
 @media screen and (max-width: 1400px) {
 
 	.nav > ul > li { padding: 0 18px 29px; }
+
+	.reverse .nav { min-width: 1000px; }
 }
 
 

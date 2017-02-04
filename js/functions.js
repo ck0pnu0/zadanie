@@ -31,6 +31,13 @@
 				$this.addClass('parent');
 			}
 		});
+
+		//logo click
+		$('.logo a').on('click', function(e) {
+			e.preventDefault();
+			$('body').toggleClass('reverse');
+			$('.search-holder').removeClass('visible');
+		});
 	});
 
 })(jQuery, window, document);
