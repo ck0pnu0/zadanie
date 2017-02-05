@@ -159,7 +159,7 @@ a {
 .nav a.back-btn:before,
 .nav a.close-btn:before { display: none; }
 
- .nav a.back-btn { background-image: url(images/back-btn.png); right: 58px; }
+.nav a.back-btn { background-image: url(images/back-btn.png); right: 58px; }
 
 /* ------------------------------------------------------------ *\
 	reverse header
@@ -263,7 +263,7 @@ a {
 	
 	.nav > ul > li,
 	.nav > ul > li > .sub-menu > ul > li,
-	.nav ul li { padding: 20px 50px 20px 20px; }
+	.nav ul li { padding: 20px 10px 20px 20px; }
 
 	.nav > ul > li { float: none; display: block; font-size: 24px; line-height: 30px; }
 	.nav > ul > li:before { display: none; }
@@ -271,7 +271,7 @@ a {
 
 	.nav a { color: #aaa; }
 	.nav li a { position: relative; }
-	.nav li a:before { content: ''; position: absolute; bottom: 7px; left: 0; right: 0; height: 2px; background: #eee; z-index: 1; }
+	.nav li a:before { content: ''; position: absolute; bottom: 7px; left: 0; right: 40px; height: 2px; background: #eee; z-index: 1; }
 	.nav li a span { display: inline-block; background: #fff; padding: 0 13px; position: relative; z-index: 2; }
 
 	.nav li.current a,
@@ -296,9 +296,10 @@ a {
 	    -moz-transition: none;
 	    -o-transition: none;
 	    transition: none;
-
-	    
 	}
+
+	.nav li a.back-btn,
+	.nav li a.close-btn { z-index: 9; }
 
 	.nav > ul > li > .sub-menu > ul > li { margin: 0; }
 
@@ -328,7 +329,7 @@ a {
 	.search-holder input[type='text'],
 	.search-holder input[type='submit'] { box-sizing: border-box; border: 1px solid #eee; }
 
-	.search-holder input[type='text'] { border-right: 0; width: 85%; color: #bbb; }
+	.search-holder input[type='text'] { border-right: 0; width: 85%; color: #bbb; height: 60px; }
 	.search-holder input[type='submit'] { width: 15%; transform: translate(0,0); }
 
 }
