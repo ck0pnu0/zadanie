@@ -126,7 +126,7 @@ a {
 .nav > ul > li { float: left; line-height: 37px; font-size: 14px; font-weight: 700; position: relative; padding: 0 25px 29px; }
 .nav > ul > li:before { content: ''; width: 1px; height: 18px; position: absolute; top: 10px; left: 0; background: #e5e5e5; }
 .nav > ul > li:first-child:before { display: none; }
-.nav > ul > li > a { text-transform: uppercase; }
+.nav > ul > li > a { text-transform: uppercase; z-index: 1; }
 .nav > ul > li > a:hover,
 .nav > ul > li:hover > a,
 .nav > ul > li.current > a { text-decoration: none; color: #eda187; }
