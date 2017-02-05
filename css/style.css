@@ -243,6 +243,7 @@ a {
 @media screen and (max-width: 1000px) {
 
 	.logo { position: static; display: block; float: none; width: 162px; margin: 0 auto; padding: 22px 0 21px; }
+	.logo a:hover { opacity: 1; }
 
 	.search-holder form { width: 100%; }
 	.search-holder input[type='submit'] { margin-right: 0; }
