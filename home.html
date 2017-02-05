@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
 
-    <title>Zadanie</title>
+    <title>Seven Spikes</title>
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/jquery.fs.selecter.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -20,6 +19,7 @@
             </div><!-- /.header -->
 
             <div class="right-nav">
+                <a href="#" class='menu-btn'>Menu</a>
                 <a href="#" class="search-ico">Search</a>
                 <a href="#" class="account-ico">Account</a>
                 <a href="#" class="like-ico">Like</a>
@@ -29,29 +29,41 @@
 
         <nav class="nav">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li class='current'><a href="#"><span>Home</span></a></li>
                 <li>
-                    <a href="#">Products</a>
+                    <a href="#"><span>Products</span></a>
+                    
+                    <div class="sub-menu">
+                        <a href="#" class="close-btn">Close</a>
+                        <a href="#" class="back-btn">Back</a>
 
-                    <ul>
-                        <li><a href="#">Bras &amp; Camisols</a></li>
-                        <li>
-                            <a href="#">Undies &amp; Panties</a>
+                        <ul>
+                            <li><a href="#"><span>Bras &amp; Camisols</span></a></li>
+                            <li>
+                                <a href="#"><span>Undies &amp; Panties</span></a>
+                                
+                                <div class="sub-menu">
+                                    <a href="#" class="close-btn">Close</a>
+                                    <a href="#" class="back-btn">Back</a>
 
-                            <ul>
-                                <li><a href="#">Undies</a></li>
-                                <li><a href="#">Panties &amp; Others</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Sleeping underwear</a></li>
-                        <li><a href="#">Underwear sets</a></li>
-                    </ul>
+                                    <ul>
+                                        <li><a href="#"><span>Undies</span></a></li>
+                                        <li><a href="#"><span>Panties &amp; Others</span></a></li>
+                                    </ul>
+                                </div><!-- /.sub-menu -->
+                            </li>
+                            <li><a href="#"><span>Sleeping underwear</span></a></li>
+                            <li><a href="#"><span>Underwear sets</span></a></li>
+                        </ul>
+                    </div><!-- /.sub-menu -->                        
                 </li>
-                <li><a href="#">Gift Cards</a></li>
-                <li><a href="#">Sale</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Blog</a></li>
+                <li><a href="#"><span>Gift Cards</span></a></li>
+                <li><a href="#"><span>Sale</span></a></li>
+                <li><a href="#"><span>About Us</span></a></li>
+                <li><a href="#"><span>Blog</span></a></li>
             </ul>
+
+            <a href="#" class="close-btn">Close</a>
         </nav><!-- /.nav -->
     </header><!-- /.header -->
 
@@ -62,13 +74,17 @@
 
         <div class="search-holder">
             <form action="#">
-                <select name="" id="">
-                    <option value="">Categories</option>
-                    <option value="">Categories1</option>
-                    <option value="">Categories2</option>
-                    <option value="">Categories3</option>
-                    <option value="">Categories4</option>
-                </select>
+                <div class="select-holder">
+                    <span></span>
+
+                    <select name="" id="">
+                        <option value="Categories">Categories</option>
+                        <option value="Categories1">Categories1</option>
+                        <option value="Categories2">Categories2</option>
+                        <option value="Categories3">Categories3</option>
+                        <option value="Categories4">Categories4</option>
+                    </select>
+                </div><!-- /.select-holder -->
 
                 <input type="text" name="Search" placeholder="Search here...">
 
@@ -78,7 +94,6 @@
     </main><!-- /.main -->
     
     <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/jquery.fs.selecter.min.js"></script>
     <script src="js/functions.js"></script>
 </body>
 </html>
