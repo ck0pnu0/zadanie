@@ -72,12 +72,14 @@
 		$('a.menu-btn').on('click', function(e) {
 			e.preventDefault();
 			$('.nav').addClass('open');
+			$('body').addClass('ovx-h');
 		});
 
 		$('a.close-btn').on('click', function(e) {
 			e.preventDefault();
 			$('.nav').removeClass('open');
 			$('.sub-menu').removeClass('open');
+			$('body').removeClass('ovx-h');
 		});
 
 		$('a.back-btn').on('click', function(e) {
@@ -93,7 +95,8 @@
 		$win.on('resize', function() {
 			setTimeout(function() {
 				if ( $win.width() >= 1001 ) {
-					heroBackground();					
+					heroBackground();
+					$('body').removeClass('ovx-h');
 				} else {
 					$('body').removeClass('reverse');
 					$('.hero-section').css('background', 'transparent');					

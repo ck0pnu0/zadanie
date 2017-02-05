@@ -14,6 +14,8 @@ body { height: 100%; }
 html { overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; overflow-x: hidden; /*IE*/ }
 body { min-width: 1000px; background: #fff; font-family: 'Montserrat', arial, sans-serif; font-size: 14px; line-height: 18px; color: #000; -webkit-font-smoothing:antialiased; font-weight: 400; }
 
+body.ovx-h { overflow-y: hidden; }
+
 a { text-decoration: none; color: #333; cursor: pointer; }
 a:hover { text-decoration: underline; }
 
@@ -56,7 +58,7 @@ td { padding: 0; }
 .clearfix:before,
 .clearfix:after,
 .header:after,
-.right-nav:after,
+.controls-nav:after,
 .nav ul:after,
 .reverse .nav > ul:after,
 .search-holder form:after,
@@ -64,7 +66,7 @@ td { padding: 0; }
 
 .clearfix:after,
 .header:after,
-.right-nav:after,
+.controls-nav:after,
 .nav ul:after,
 .reverse .nav > ul:after,
 .search-holder form:after,
@@ -82,7 +84,7 @@ a {
 
 .logo a,
 .search-holder input[type='submit'],
-.right-nav a {
+.controls-nav a {
 	transition: opacity 0.2s; 
 	-webkit-transition: opacity 0.2s; 
 }
@@ -110,14 +112,14 @@ a {
 .logo a:hover { opacity: 0.7; }
 
 
-.right-nav { float: right; margin: 4px 4px 0 0; }
-.right-nav a { float: left; width: 33px; height: 32px; font-size: 0; line-height: 0; text-indent: -9999px; margin-right: 28px; }
-.right-nav a:hover { opacity: 0.7; }
-.right-nav a.search-ico { background: url(images/search-icon.png) 0 0 no-repeat; }
-.right-nav a.account-ico { background: url(images/account-icon.png) 0 0 no-repeat; }
-.right-nav a.like-ico { background: url(images/like-icon.png) 0 0 no-repeat; }
-.right-nav a.cart-ico { background: url(images/cart-icon.png) 0 0 no-repeat; }
-.right-nav a.menu-btn { display: none; background: url(images/menu-btn.png) no-repeat 0 0; }
+.controls-nav { float: right; margin: 4px 4px 0 0; }
+.controls-nav a { float: left; width: 33px; height: 32px; font-size: 0; line-height: 0; text-indent: -9999px; margin-right: 28px; }
+.controls-nav a:hover { opacity: 0.7; }
+.controls-nav a.search-ico { background: url(images/search-icon.png) 0 0 no-repeat; }
+.controls-nav a.account-ico { background: url(images/account-icon.png) 0 0 no-repeat; }
+.controls-nav a.like-ico { background: url(images/like-icon.png) 0 0 no-repeat; }
+.controls-nav a.cart-ico { background: url(images/cart-icon.png) 0 0 no-repeat; }
+.controls-nav a.menu-btn { display: none; background: url(images/menu-btn.png) no-repeat 0 0; }
 
 .nav { position: absolute; top: 19px; left: 50%; transform: translateX(-50%); z-index: 1; }
 .nav a { display: block; }
@@ -231,7 +233,7 @@ a {
 @media screen and (max-width: 1200px) {
 	body { min-width: 100%; }
 
-	.right-nav a { margin-right: 15px; }
+	.controls-nav a { margin-right: 15px; }
 
 	.nav > ul > li { padding: 0 10px 29px; }
 }
@@ -250,9 +252,9 @@ a {
 
 	.side-holder { height: auto; padding: 0; box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none; }
 
-	.right-nav { display: block; width: 100%; float: none; padding: 23px 0 25px; margin: 0; text-align: center; box-shadow: 0 0 20px rgba(0,0,0,0.2); -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.2); -moz-box-shadow: 0 0 20px rgba(0,0,0,0.2); }
-	.right-nav a { float: none; display: inline-block; margin: 0 17px; line-height: 32px; }
-	.right-nav a.menu-btn { display: inline-block; }
+	.controls-nav { display: block; width: 100%; float: none; padding: 23px 0 25px; margin: 0; text-align: center; box-shadow: 0 0 20px rgba(0,0,0,0.2); -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.2); -moz-box-shadow: 0 0 20px rgba(0,0,0,0.2); }
+	.controls-nav a { float: none; display: inline-block; margin: 0 17px; line-height: 32px; }
+	.controls-nav a.menu-btn { display: inline-block; }
 
 	.nav { position: fixed; top: 0; bottom: 0; left: 0; width: 450px; background: #fff; padding: 60px 10px 20px; box-sizing: border-box; transform: translate(0,0); box-shadow: 0 0 20px rgba(0,0,0,0.2); -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.2); -moz-box-shadow: 0 0 20px rgba(0,0,0,0.2); transform: translateX(-120%); transition: all 0.3s; z-index: 1; overflow-y: scroll; }
 
@@ -335,7 +337,7 @@ a {
 }
 
 @media screen and (max-width: 479px) {
-	.right-nav a { margin: 0 10px; }
+	.controls-nav a { margin: 0 10px; }
 
 	.nav { width: 320px; }
 
