@@ -11,8 +11,8 @@ section { display: block; }
 html,
 body { height: 100%; }
 
-html { overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-body { min-width: 1000px; background: #fff; font-family: 'Montserrat', arial, sans-serif; font-size: 14px; line-height: 18px; color: #000; -webkit-font-smoothing:antialiased; font-weight: 400; oveflow-x: hidden; }
+html { overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; oveflow-x: hidden; /*IE*/ }
+body { min-width: 1000px; background: #fff; font-family: 'Montserrat', arial, sans-serif; font-size: 14px; line-height: 18px; color: #000; -webkit-font-smoothing:antialiased; font-weight: 400; }
 
 a { text-decoration: none; color: #333; cursor: pointer; }
 a:hover { text-decoration: underline; }
