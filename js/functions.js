@@ -83,7 +83,11 @@
 		$('a.back-btn').on('click', function(e) {
 			e.preventDefault();
 
-			$(this).parent().removeClass('open');
+			if ( $('.sub-menu .sub-menu').hasClass('open') ) {
+				$('.sub-menu .sub-menu').removeClass('open');
+			} else {
+				$('.sub-menu').removeClass('open');
+			}
 		});
 
 		$win.on('resize', function() {

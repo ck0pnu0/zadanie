@@ -24,7 +24,7 @@ small { font-size: 80%; }
 button,
 input,
 select,
-textarea { font-family: inherit; font-size: inherit; color: inherit; -webkit-font-smoothing:antialiased; -webkit-appearance: none; }
+textarea { font-family: inherit; font-size: inherit; color: inherit; -webkit-font-smoothing:antialiased; -webkit-appearance: none; border-radius: 0; -webkit-border-radius: 0; }
 
 button,
 input[type="button"],
@@ -281,7 +281,7 @@ a {
 	.nav li a:hover,
 	.nav > ul > li:hover > a { color: #aaa; }
 
-	.nav li .sub-menu { position: fixed; top: 0; left: 0; bottom: 0; width: 420px; background: #fff; z-index: 10; box-shadow: 0 0 20px rgba(0,0,0,0.2); -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.2); -moz-box-shadow: 0 0 20px rgba(0,0,0,0.2); transform: translateX(-120%); transition: all 0.3s;  }
+	.nav li .sub-menu { position: fixed; top: 0; left: 0; bottom: 0; width: 420px; background: #fff; z-index: 10; box-shadow: 0 0 20px rgba(0,0,0,0.2); -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.2); -moz-box-shadow: 0 0 20px rgba(0,0,0,0.2); transform: translateX(-120%); transition: all 0.3s; min-height: 1000px; }
 
 	.nav li .sub-menu.open { transform: translateX(0); z-index: 10; }
 
